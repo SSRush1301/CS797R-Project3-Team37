@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="calcAppT37_REST.Views.ExpressionHistoryPage"
              Title="ExpressionHistoryPage"
+             xmlns:local="clr-namespace:calcAppT37_REST"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
-   
+    <ContentPage.BindingContext>
+        <local:ExpressionHistoryViewModel />
+    </ContentPage.BindingContext>
 </ContentPage>
