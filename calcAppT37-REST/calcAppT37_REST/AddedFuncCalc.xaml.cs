@@ -1,14 +1,16 @@
 ﻿
 using System.Data;
-
+using calcAppT37_REST.ViewModels;
 namespace calcAppT37_REST;
 
 public partial class AddedFuncCalc : ContentPage
 {
+   // public static ExpressionHistoryViewModel _vm;
     public AddedFuncCalc()
     {
         InitializeComponent();
         OnClear(this, null);
+        //_vm = new ExpressionHistoryViewModel();
     }
 
     string currentEntry = "";
@@ -100,6 +102,9 @@ public partial class AddedFuncCalc : ContentPage
                 LockNumberValue(resultText.Text);
             }
             double result = CalcAppT37_REST.Calculate(firstNumber, secondNumber, mathOperator);
+            string newExpression = $"{firstNumber} {mathOperator} {secondNumber} = {this.resultText.Text}";
+            //_vm.AddExpression(newExpression);
+
 
             this.resultText.Text = result.ToTrimmedString(decimalFormat);
             firstNumber = result;

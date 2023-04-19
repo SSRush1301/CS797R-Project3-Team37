@@ -4,8 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:calcAppT37_REST"
-    xmlns:views="clr-namespace:calcAppT37_REST.Views"
     >
+    
     <ShellContent
         Title="CalculatorPage"
         ContentTemplate="{DataTemplate local:BasicCalc}"
@@ -17,7 +17,7 @@
     <ShellContent Title="Simple Exercises"
                   ContentTemplate="{DataTemplate local:SimpleExercisesPage}" />
     <ShellContent Title="Calculator Expression History"
-                  ContentTemplate="{DataTemplate views:ExpressionHistoryPage}"/>
+                  ContentTemplate="{DataTemplate local:ExpressionHistoryPage}"/>
     <MenuItem Text="Light Theme" Clicked="OnLight"/>
     <MenuItem Text="Dark Theme" Clicked="OnDark"/>
     <MenuItem Text="Red Theme" Clicked="OnRed"/>

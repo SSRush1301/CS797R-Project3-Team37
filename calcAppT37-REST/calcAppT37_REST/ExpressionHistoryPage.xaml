@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcAppT37_REST.ExpressionHistoryPage"
+             Title="ExpressionHistoryPage"
+             xmlns:local="clr-namespace:calcAppT37_REST"
+             BackgroundColor="{DynamicResource PageBackgroundColor}"
+             xmlns:viewmodel="clr-namespace:calcAppT37_REST.ViewModels"
+             x:DataType="viewmodel:ExpressionHistoryViewModel">
+
+
+    <ListView ItemsSource="{Binding ExpressionHistory}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Style="{StaticResource LargeLabelStyle}" Text="{Binding .}"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
