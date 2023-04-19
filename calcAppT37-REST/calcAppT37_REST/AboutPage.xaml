@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcAppT37_REST.AboutPage"
+             Title="AboutPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <VerticalStackLayout BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+        <Label x:Name="Title" Grid.Row="0" Grid.Column="0"  FontSize="50" Text="Code Contributors" LineBreakMode="NoWrap" Grid.ColumnSpan="2"
+               Style="{StaticResource LargeLabelStyle}" BackgroundColor="{DynamicResource Label}"/>
+
+        <Label x:Name="JacobInfo" Grid.Row="1" Grid.Column="0"  FontSize="30" Text="Jacob Colton Schonhoff" Grid.ColumnSpan="3"
+               Style="{StaticResource MediumLabelStyle}" BackgroundColor="{DynamicResource Label}"/>
+        <Label x:Name="JacobID" Grid.Row="2" Grid.Column="0"   FontSize="20" Text="WSUID:B658X623" Grid.ColumnSpan="3"
+               Style="{StaticResource MediumLabelStyle}" BackgroundColor="{DynamicResource Label}"/>
+        <Label x:Name="JacobEmail" Grid.Row="3" Grid.Column="0"  FontSize="15" Text="Email:jcschonhoff@shockers.wichita.edu" Grid.ColumnSpan="3"
+               Style="{StaticResource MediumLabelStyle}" BackgroundColor="{DynamicResource Label}"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

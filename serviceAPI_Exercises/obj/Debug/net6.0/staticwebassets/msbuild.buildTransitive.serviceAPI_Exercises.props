@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\serviceAPI_Exercises.props" />
+</Project>

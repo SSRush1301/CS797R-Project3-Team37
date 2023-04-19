@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calcAppT37_REST.AddedFuncCalc"
+             Title="AddedFuncCalc">
+    <Grid Padding="16" RowSpacing="2" ColumnSpacing="2"
+          RowDefinitions="2*,*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*"
+          BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+        <Label x:Name="CurrentCalculation"
+               FontSize="24"
+               LineBreakMode="NoWrap"
+               Grid.ColumnSpan="4"
+               Text=""
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Start"
+               Grid.Row="0"
+               Style="{StaticResource MediumLabelStyle}"/>
+
+        <Label x:Name="resultText"
+               FontSize="52" FontAttributes="Bold" Text="0"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="End"
+               LineBreakMode="NoWrap" Grid.ColumnSpan="4" 
+               Style="{StaticResource MediumLabelStyle}"/>
+
+        <BoxView BackgroundColor="{DynamicResource PageBackgroundColor}" HeightRequest="1"
+                 Grid.Row="0" VerticalOptions="End"
+                 Grid.ColumnSpan="4"
+                 />
+
+        <Button Text="C" Grid.Row="1" Grid.Column="0"
+               Clicked="OnClear" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="+/-" Grid.Row="1" Grid.Column="1"
+               Clicked="OnNegative" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="%" Grid.Row="1" Grid.Column="2"
+               Clicked="OnPercentage" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+        <Button Text="√" Grid.Row="2" Grid.Column="0"
+               Clicked="OnRoot" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="(" Grid.Row="2" Grid.Column="1"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text=")" Grid.Row="2" Grid.Column="2"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+        <Button Text="7" Grid.Row="3" Grid.Column="0"
+               Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="8" Grid.Row="3" Grid.Column="1"
+               Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="9" Grid.Row="3" Grid.Column="2"
+               Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+        <Button Text="4" Grid.Row="4" Grid.Column="0"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="5" Grid.Row="4" Grid.Column="1"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="6" Grid.Row="4" Grid.Column="2"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+        <Button Text="1" Grid.Row="5" Grid.Column="0"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="2" Grid.Row="5" Grid.Column="1"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="3" Grid.Row="5" Grid.Column="2"
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+        <Button Text="00" Grid.Row="6" Grid.Column="0" 
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="0" Grid.Row="6" Grid.Column="1" 
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="." Grid.Row="6" Grid.Column="2" 
+              Clicked="OnSelectNumber" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+
+        <Button Text="Mod" Grid.Row="1" Grid.Column="3"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="÷" Grid.Row="2" Grid.Column="3"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="×" Grid.Row="3" Grid.Column="3"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="-" Grid.Row="4" Grid.Column="3"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+        <Button Text="+" Grid.Row="5" Grid.Column="3"
+               Clicked="OnSelectOperator" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+
+
+        <Button Text="=" Grid.Row="6" Grid.Column="3" 
+               Clicked="OnCalculateResult" Style="{StaticResource ButtonStyle}" BackgroundColor="{DynamicResource EqualToColor}"/>
+
+    </Grid>
+</ContentPage>
