@@ -11,7 +11,7 @@
         <viewmodel:ExpressionHistoryViewModel />
     </ContentPage.BindingContext>
 
-
+    <VerticalStackLayout>
     <ListView ItemsSource="{Binding Expressions}">
         <ListView.ItemTemplate>
             <DataTemplate>
@@ -21,4 +21,5 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    </VerticalStackLayout>
 </ContentPage>

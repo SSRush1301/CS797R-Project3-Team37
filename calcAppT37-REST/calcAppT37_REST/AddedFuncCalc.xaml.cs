@@ -6,11 +6,13 @@ namespace calcAppT37_REST;
 
 public partial class AddedFuncCalc : ContentPage
 {
+    
     public AddedFuncCalc()
     {
         InitializeComponent();
         OnClear(this, null);
         BindingContext = new ExpressionHistoryViewModel();
+        
     }
 
     string currentEntry = "";

@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+
 namespace calcAppT37_REST.ViewModels;
 
 public class ExpressionHistoryViewModel: INotifyPropertyChanged
@@ -9,6 +11,7 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
 
     private static List<string> _expressions = new List<string>();
 
+    
     public List<string> Expressions
     {
         get => _expressions;
@@ -17,14 +20,14 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
             if (_expressions != value)
             {
                 _expressions = value;
-                OnPropertyChanged(nameof(Expressions));
+                OnPropertyChanged();
             }
         }
     }
 
     public ExpressionHistoryViewModel()
     {
-        AddExpression("Testing");
+        //AddExpression("Testing");
     }
 
     public void AddExpression(string _expression)
@@ -32,10 +35,10 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
         Expressions.Add(_expression);
         OnPropertyChanged(nameof(Expressions));
     }
-   
 
 
-    
+
+
 
     public void OnPropertyChanged([CallerMemberName] string name = null) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
