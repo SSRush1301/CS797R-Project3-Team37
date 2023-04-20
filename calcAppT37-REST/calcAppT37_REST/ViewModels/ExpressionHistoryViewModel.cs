@@ -7,7 +7,7 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private List<string> _expressions;
+    private static List<string> _expressions = new List<string>();
 
     public List<string> Expressions
     {
@@ -17,26 +17,26 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
             if (_expressions != value)
             {
                 _expressions = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(Expressions));
             }
         }
     }
 
     public ExpressionHistoryViewModel()
     {
-        Expressions = new List<string>();
         AddExpression("Testing");
     }
 
     public void AddExpression(string _expression)
     {
         Expressions.Add(_expression);
+        OnPropertyChanged(nameof(Expressions));
     }
    
 
 
     
 
-    public void OnPropertyChanged([CallerMemberName] string name = "") =>
+    public void OnPropertyChanged([CallerMemberName] string name = null) =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 }

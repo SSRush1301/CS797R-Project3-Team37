@@ -15,7 +15,9 @@
     <ListView ItemsSource="{Binding Expressions}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <Label Style="{StaticResource LargeLabelStyle}" Text="{Binding}"/>
+                <ViewCell>
+                    <Label Style="{StaticResource LargeLabelStyle}" Text="{Binding}"/>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
