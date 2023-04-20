@@ -6,15 +6,16 @@
              xmlns:local="clr-namespace:calcAppT37_REST"
              BackgroundColor="{DynamicResource PageBackgroundColor}"
              xmlns:viewmodel="clr-namespace:calcAppT37_REST.ViewModels"
-             x:DataType="viewmodel:ExpressionHistoryViewModel">
+             >
+    <ContentPage.BindingContext>
+        <viewmodel:ExpressionHistoryViewModel />
+    </ContentPage.BindingContext>
 
 
-    <ListView ItemsSource="{Binding ExpressionHistory}">
+    <ListView ItemsSource="{Binding Expressions}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
-                    <Label Style="{StaticResource LargeLabelStyle}" Text="{Binding .}"/>
-                </ViewCell>
+                <Label Style="{StaticResource LargeLabelStyle}" Text="{Binding}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

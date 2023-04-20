@@ -7,31 +7,35 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ExpressionHistoryViewModel()
-    {
-        ExpressionHistory = new ObservableCollection<string>();
-    }
+    private List<string> _expressions;
 
-    ObservableCollection<string> _expressionHistory;
-    public ObservableCollection<string> ExpressionHistory
+    public List<string> Expressions
     {
-        get => _expressionHistory;
+        get => _expressions;
         set
         {
-            _expressionHistory = value;
-            OnPropertyChanged(nameof(ExpressionHistory));
+            if (_expressions != value)
+            {
+                _expressions = value;
+                OnPropertyChanged();
+            }
         }
     }
 
-    public void AddExpression(string newExpression)
+    public ExpressionHistoryViewModel()
     {
-        if (string.IsNullOrEmpty(newExpression))
-            return;
-        ExpressionHistory.Add(newExpression);
+        Expressions = new List<string>();
+        AddExpression("Testing");
     }
 
+    public void AddExpression(string _expression)
+    {
+        Expressions.Add(_expression);
+    }
+   
 
 
+    
 
     public void OnPropertyChanged([CallerMemberName] string name = "") =>
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
