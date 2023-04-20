@@ -1,7 +1,11 @@
 # cs797r-project-3-team-37
+
 Project 3 - Jacob Schonhoff
+
 GitHub ID: SSRush1301
+
 Hours Worked On This Project: 14
+
 Contributors: 
         
         (From Other Repository) Calculator Pages/About Page - Jacob Schonhoff, Justin Srikotla, Lakshmi Guduru
