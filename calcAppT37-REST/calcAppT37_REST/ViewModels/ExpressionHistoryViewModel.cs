@@ -9,10 +9,10 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private static List<string> _expressions = new List<string>();
+    private ObservableCollection<string> _expressions;
 
     
-    public List<string> Expressions
+    public ObservableCollection<string> Expressions
     {
         get => _expressions;
         set
@@ -27,7 +27,7 @@ public class ExpressionHistoryViewModel: INotifyPropertyChanged
 
     public ExpressionHistoryViewModel()
     {
-        //AddExpression("Testing");
+        Expressions = new ObservableCollection<string>();
     }
 
     public void AddExpression(string _expression)

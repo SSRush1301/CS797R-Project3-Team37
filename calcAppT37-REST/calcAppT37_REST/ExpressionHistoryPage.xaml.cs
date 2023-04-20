@@ -8,7 +8,7 @@ public partial class ExpressionHistoryPage : ContentPage
 	public ExpressionHistoryPage()
 	{
 		InitializeComponent();
-		
+		BindingContext = MauiProgram._expressionHistoryViewModel;
 	}
 
 }

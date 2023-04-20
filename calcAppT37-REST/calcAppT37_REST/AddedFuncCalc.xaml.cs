@@ -1,5 +1,4 @@
 ﻿
-using calcAppT37_REST.ViewModels;
 using System.Data;
 namespace calcAppT37_REST;
 
@@ -11,7 +10,7 @@ public partial class AddedFuncCalc : ContentPage
     {
         InitializeComponent();
         OnClear(this, null);
-        BindingContext = new ExpressionHistoryViewModel();
+        
         
     }
 
@@ -104,12 +103,6 @@ public partial class AddedFuncCalc : ContentPage
                 LockNumberValue(resultText.Text);
             }
             double result = CalcAppT37_REST.Calculate(firstNumber, secondNumber, mathOperator);
-            string newExpression = $"{firstNumber} {mathOperator} {secondNumber} = {result}";
-            var viewModel = (ExpressionHistoryViewModel)BindingContext;
-            viewModel.AddExpression(newExpression);
-            
-
-
             this.resultText.Text = result.ToTrimmedString(decimalFormat);
             firstNumber = result;
             secondNumber = 0;

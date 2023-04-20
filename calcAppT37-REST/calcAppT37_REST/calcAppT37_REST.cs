@@ -25,6 +25,8 @@ public static class CalcAppT37_REST
                 break;
         }
 
+        MauiProgram._expressionHistoryViewModel.AddExpression($"{value1} {mathOperator} {value2} = {result}");
+
         return result;
     }
 }
